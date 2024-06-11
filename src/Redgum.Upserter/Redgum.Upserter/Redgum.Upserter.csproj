@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>Latest</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+    <PackageReference Include="MinVer" Version="4.3.0" PrivateAssets="All" />
+  </ItemGroup>
+  
+  <PropertyGroup>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+    <PackageProjectUrl>https://github.com/RedgumTechnologies/upserter</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/RedgumTechnologies/upserter</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageTags>redgum upsert upserter</PackageTags>
+    <Description>Upsert extension methods and base service implementations</Description>
+    <Copyright>Copyright © 2023 Redgum Technologies Pty Ltd</Copyright>
+    <Authors>ScottRapsey, RedgumTechnologies</Authors>
+    <Title>Redgum.Upserter</Title>
+    <Company>RedgumTechnologies</Company>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+  </PropertyGroup>
+</Project>
